@@ -36,6 +36,12 @@ class TestCocinero(unittest.TestCase):
         mc = MiClase(24736, 116, 15, ["Canción 4","Canción 5", "Canción 6"], [0.3, 0.6, 0.5])
         self.assertEqual(mc.VerificaListaCanciones(["Canción 4", "Canción 5", "Canción 6"]), True)
 
+    def test_Encuentra(self):
+        mc = MiClase(24736, 116, 15, [
+                     "Canción 4", "Canción 5", "Canción 6"], [0.3, 0.6, 0.5])
+        self.assertEqual(mc.Encuentra(
+            [1, 43, 56, 78, 23, 6], 78), True)
+
 
 if __name__ == "__main__":
     unittest.main()
