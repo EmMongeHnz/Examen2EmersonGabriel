@@ -10,7 +10,7 @@ class MiClase:
         # Convierte el número en una cadena para contar los dígitos impares
         numero_str = str(numero)
         digitos_impares = [int(digit)
-                           for digit in numero_str if int(digit) % 2 != 0]
+                           for digit in numero_str if int(digit) % 2 == 0]
         return len(digitos_impares)
 
     def DivisibleTempo(self, numero):
@@ -25,6 +25,12 @@ class MiClase:
     def VerificaListaCanciones(self, lista):
         if any(song is None for song in lista):
             return False
+        return True
+
+    def Encuentra(self, lista, elemento):
+        for i in lista:
+            if i == elemento:
+                return False
         return True
 
 
